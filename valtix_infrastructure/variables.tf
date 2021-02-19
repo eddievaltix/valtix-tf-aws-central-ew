@@ -44,11 +44,6 @@ variable "availability_zones" {
   description = "List of Availability Zones for services VPC"
 }
 
-//transit gateway variable
-variable "transit_gateway_name" {
-  description = "name of Transit Gateway deployed by Valtix"
-}
-
 //Valtix gateway variables
 variable "valtix_ingress_gw_name" {
   description = "name of Valtix ingress gateway"
@@ -62,16 +57,13 @@ variable "valtix_ew_gw_name" {
 variable "gw_keypair_name" {
   description = "name of EC2 keypair to use to deploy Valtix gateways"
 }
-variable "gw_keypair_name" {
-  description = "name of EC2 keypair to use to deploy Valtix gateways"
-}
-variable "var.gw_image_name" {
+variable "gw_image_name" {
   description = "name of gateway image to use to deploy Valtix gateways.  This can be found in the Valtix UI when deploying Valtix gateways"
 }
-variable "var.tgw_id" {
+variable "tgw_id" {
   description = "id of transit gateway to be used for Valtix gateways"
 }
-variable "var.firewall_role_name" {
+variable "valtix_firewall_role_name" {
   description = "name of the AWS IAM firewall role created by valtix_iam template as found as an output"
 }
 
@@ -83,10 +75,6 @@ variable "valtix_ingress_policy_ruleset_id" {
 variable "valtix_egress_policy_ruleset_id" {
   description = "policy ruleset id of valtix egress gateway"
 }
-variable "valtix_eastwest_policy_ruleset_id" {
-  description = "policy ruleset id of valtix eastwest gateway"
-}
-
-variable "valtix_eastwest_policy_ruleset_id" {
+variable "valtix_ew_policy_ruleset_id" {
   description = "policy ruleset id of valtix eastwest gateway"
 }

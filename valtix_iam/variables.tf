@@ -1,7 +1,4 @@
 //provider variables
-variable "aws_profile_name_security" {
-  description = "AWS profile credentials used to establish connection to AWS Network Security Account where Valtix is deployed"
-}
 variable "valtix_account_name" {
   description = "account name provided by Valtix"
 }

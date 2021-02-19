@@ -1,5 +1,4 @@
 //provider variables
-aws_profile_name_security = ""
 valtix_account_name       = "" //get this from Valtix
 valtix_controller_url     = "" //get this from Valtix
 valtix_key_file           = "./keys/valtix_api.key"
@@ -10,4 +9,5 @@ account_number            = ""
 external_id               = "" //get this from Valtix
 region                    = ""
 cloud_account_name        = ""
+inventory_region          = ["us-east-1"]
 s3_bucket                 = ""

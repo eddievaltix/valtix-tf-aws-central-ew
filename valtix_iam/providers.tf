@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  profile = var.aws_profile_name_security
+  //profile = ""
   region  = var.region
   version = "~> 3.25.0"
 }

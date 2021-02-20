@@ -7,5 +7,5 @@ module "iam" {
   ExternalId                    = var.external_id
   region                        = var.region
   s3_bucket                     = var.s3_bucket
-  deployment_name               = var.valtix_account_name
+  //deployment_name             = var.valtix_account_name (not required for customer use)
 }

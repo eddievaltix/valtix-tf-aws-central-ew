@@ -9,8 +9,8 @@ cloud_account_name        = ""
 
 //service vpc variables
 services_vpc_ingress_name = "valtix_ingress"
-services_vpc_ew_name      = "valtix_egress"
-services_vpc_egress_name  = "valtix_eastwest"
+services_vpc_ew_name      = "valtix_eastwest"
+services_vpc_egress_name  = "valtix_egress"
 ingress_cidr              = "10.100.0.0/24"
 egress_cidr               = "10.100.1.0/24"
 ew_cidr                   = "10.100.2.0/24"

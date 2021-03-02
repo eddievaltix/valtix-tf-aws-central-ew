@@ -3,7 +3,7 @@ terraform {
   required_providers {
     valtix = {
       source  = "valtix-security/valtix"
-      version = "2.5.1"
+      version = "2.6.0"
     }
   }
 }

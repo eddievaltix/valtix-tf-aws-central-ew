@@ -17,16 +17,4 @@ This template creates the Valtix Services VPC and Valtix Gateways in the account
 1. git clone this repo
 1. follow instructions [here](https://registry.terraform.io/providers/valtix-security/valtix/latest/docs) to download Valtix API key file and store on a directory
 1. use the terraform_tfvars.example files to create a terraform.tfvars file for each template
-1. declare a Terraform backend for remote state by creating a terraform_remote_state.tf with the following example code block for each of the template folders.  Remember to use a different key attribute for each template folder
-```
-terraform {
-  backend "s3" {
-    bucket         = "my_s3_bucket"
-    key            = "valtix-tf-aws-central/valtix_iam/terraform.tfstate"
-    region         = "us-west-2"
-    dynamodb_table = "my_dynamodb_table"
-    encrypt        = true
-  }
-}
-```
 1. run terraform init, terraform plan, terraform apply

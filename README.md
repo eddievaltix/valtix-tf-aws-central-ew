@@ -1,5 +1,5 @@
 # Valtix Terraform Centralized Ingress, Egress & East West gateway Example Template
-This Terraform template creates a Valtix ingress, egress and east west gateways in a AWS centralized inspection architecture with Transit Gateway.  The templates are split into the following template folders:
+This Terraform example template creates a Valtix ingress, egress and east west gateways in a AWS centralized inspection architecture with Transit Gateway.  The templates are split into the following template folders:
 
 ## valtix_iam
 This template creates the IAM policies and roles required for Valtix controller to work with the AWS account as well as the account registration on the Valtix controller.  This is created in a separate template as these resources tend to be mostly static in a deployment.  

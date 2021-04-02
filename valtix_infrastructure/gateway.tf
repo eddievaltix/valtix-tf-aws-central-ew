@@ -12,7 +12,6 @@ resource "valtix_gateway" gw-ingress {
   aws_iam_role_firewall = var.valtix_firewall_role_name
   region                = var.region
   vpc_id                = valtix_service_vpc.service_vpc_ingress.id
-  transit_gateway_id    = var.tgw_id
 }
 
 resource "valtix_gateway" gw-egress {
@@ -29,7 +28,6 @@ resource "valtix_gateway" gw-egress {
   aws_iam_role_firewall = var.valtix_firewall_role_name
   region                = var.region
   vpc_id                = valtix_service_vpc.service_vpc_egress.id
-  transit_gateway_id    = var.tgw_id
   aws_gateway_lb        = "true" //this should be set only if deploying in regions where gateway load balancer is supported
 }
 
@@ -46,7 +44,6 @@ resource "valtix_gateway" gw-ew {
   aws_iam_role_firewall = var.valtix_firewall_role_name
   region                = var.region
   vpc_id                = valtix_service_vpc.service_vpc_ew.id
-  transit_gateway_id    = var.tgw_id
   aws_gateway_lb        = "true" //this should be set only if deploying in regions where gateway load balancer is supported
   settings {
     name = "gateway.snat_mode"

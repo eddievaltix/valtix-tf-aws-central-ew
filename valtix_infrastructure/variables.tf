@@ -43,6 +43,9 @@ variable "ew_cidr" {
 variable "availability_zones" {
   description = "List of Availability Zones for services VPC"
 }
+variable "tgw_id" {
+  description = "id of transit gateway to be used for Valtix gateways"
+}
 
 //Valtix gateway variables
 variable "valtix_ingress_gw_name" {
@@ -59,9 +62,6 @@ variable "gw_keypair_name" {
 }
 variable "gw_image_name" {
   description = "name of gateway image to use to deploy Valtix gateways.  This can be found in the Valtix UI when deploying Valtix gateways"
-}
-variable "tgw_id" {
-  description = "id of transit gateway to be used for Valtix gateways"
 }
 variable "valtix_firewall_role_name" {
   description = "name of the AWS IAM firewall role created by valtix_iam template as found as an output"

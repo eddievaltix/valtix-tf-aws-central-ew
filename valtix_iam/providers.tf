@@ -3,7 +3,10 @@ terraform {
   required_providers {
     valtix = {
       source  = "valtix-security/valtix"
-      version = "2.6.0"
+      version = "2.7.0"
+    }
+    aws = {
+      version = "~> 3.35.0"
     }
   }
 }
@@ -11,7 +14,6 @@ terraform {
 provider "aws" {
   //profile = ""
   region  = var.region
-  version = "~> 3.25.0"
 }
 
 provider "valtix" {

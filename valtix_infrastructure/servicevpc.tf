@@ -4,6 +4,7 @@ resource "valtix_service_vpc" service_vpc_ingress {
   region             = var.region
   cidr               = var.ingress_cidr
   availability_zones = var.availability_zones
+  transit_gateway_id = var.tgw_id
 }
 
 resource "valtix_service_vpc" service_vpc_egress {
@@ -12,6 +13,7 @@ resource "valtix_service_vpc" service_vpc_egress {
   region             = var.region
   cidr               = var.egress_cidr
   availability_zones = var.availability_zones
+  transit_gateway_id = var.tgw_id
 }
 
 resource "valtix_service_vpc" service_vpc_ew {
@@ -20,4 +22,5 @@ resource "valtix_service_vpc" service_vpc_ew {
   region             = var.region
   cidr               = var.ew_cidr
   availability_zones = var.availability_zones
+  transit_gateway_id = var.tgw_id
 }

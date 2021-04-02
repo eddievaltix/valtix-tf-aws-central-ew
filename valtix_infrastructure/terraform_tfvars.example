@@ -14,15 +14,15 @@ services_vpc_egress_name  = "valtix_egress"
 ingress_cidr              = "10.100.0.0/24"
 egress_cidr               = "10.100.1.0/24"
 ew_cidr                   = "10.100.2.0/24"
-availability_zones        = ["us-west-2a", "us-west-2b"]
+availability_zones        = ["us-east-1a", "us-east-1b"]
+tgw_id                    = ""
 
 //Valtix gateway variables
-valtix_ingress_gw_name            = "aws-valtix-us-west-2-ingress"
-valtix_egress_gw_name             = "aws-valtix-us-west-2-egress"
-valtix_ew_gw_name                 = "aws-valtix-us-west-2-ew"
+valtix_ingress_gw_name            = "aws-valtix-us-east-1-ingress"
+valtix_egress_gw_name             = "aws-valtix-us-east-1-egress"
+valtix_ew_gw_name                 = "aws-valtix-us-east-1-ew"
 gw_keypair_name                   = "valtix-keypair"
-gw_image_name                     = "2.6-09" //recommend select the latest from Valtix UI
-tgw_id                            = ""
+gw_image_name                     = "2.7-16" //recommend select the latest from Valtix UI
 valtix_firewall_role_name         = "valtix-firewall-role"
 valtix_ingress_policy_ruleset_id  = ""
 valtix_egress_policy_ruleset_id   = ""

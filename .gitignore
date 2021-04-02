@@ -12,3 +12,4 @@ values
 /keys
 .terraform*
 tf_remote_state.tf
+.vscode

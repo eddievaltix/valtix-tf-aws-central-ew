@@ -1,4 +1,4 @@
-resource "valtix_service_vpc" service_vpc_ingress {
+resource "valtix_service_vpc" "service_vpc_ingress" {
   name               = var.services_vpc_ingress_name
   csp_account_name   = var.cloud_account_name
   region             = var.region
@@ -7,7 +7,7 @@ resource "valtix_service_vpc" service_vpc_ingress {
   transit_gateway_id = var.tgw_id
 }
 
-resource "valtix_service_vpc" service_vpc_egress {
+resource "valtix_service_vpc" "service_vpc_egress" {
   name               = var.services_vpc_egress_name
   csp_account_name   = var.cloud_account_name
   region             = var.region
@@ -16,7 +16,7 @@ resource "valtix_service_vpc" service_vpc_egress {
   transit_gateway_id = var.tgw_id
 }
 
-resource "valtix_service_vpc" service_vpc_ew {
+resource "valtix_service_vpc" "service_vpc_ew" {
   name               = var.services_vpc_ew_name
   csp_account_name   = var.cloud_account_name
   region             = var.region

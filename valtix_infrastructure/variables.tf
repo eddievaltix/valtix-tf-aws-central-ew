@@ -66,15 +66,12 @@ variable "gw_image_name" {
 variable "valtix_firewall_role_name" {
   description = "name of the AWS IAM firewall role created by valtix_iam template as found as an output"
 }
-
-// The below inputs are retrieved from outputs from the valtix_policy template.  It is recommended that you data source using Terraform
-// Remote State to retrieve these values.  There is a roadmap item to support data sourcing of the valtix policy ruleset resource
-variable "valtix_ingress_policy_ruleset_id" {
-  description = "policy ruleset id of valtix ingress gateway"
+variable "ingress_policy_ruleset_name" {
+  description = "name of ingress policy ruleset"
 }
-variable "valtix_egress_policy_ruleset_id" {
-  description = "policy ruleset id of valtix egress gateway"
+variable "egress_policy_ruleset_name" {
+  description = "name of egress policy ruleset"
 }
-variable "valtix_ew_policy_ruleset_id" {
-  description = "policy ruleset id of valtix eastwest gateway"
+variable "ew_policy_ruleset_name" {
+  description = "name of ew policy ruleset"
 }

@@ -1,5 +1,17 @@
+resource "valtix_policy_rule_set" "ingress_policy_rule_set" {
+  name = var.ingress_policy_ruleset_name
+}
+
+resource "valtix_policy_rule_set" "ew_policy_rule_set" {
+  name = var.ew_policy_ruleset_name
+}
+
 resource "valtix_policy_rule_set" "egress_policy_rule_set" {
   name = var.egress_policy_ruleset_name
+}
+
+resource "valtix_policy_rules" "ew_policy_rules" {
+  rule_set_id = valtix_policy_rule_set.ew_policy_rule_set.rule_set_id
   rule {
     name                      = "forward-all-allow"
     description               = "rule for forwarding all traffic"
@@ -11,12 +23,8 @@ resource "valtix_policy_rule_set" "egress_policy_rule_set" {
   }
 }
 
-resource "valtix_policy_rule_set" "ingress_policy_rule_set" {
-  name = var.ingress_policy_ruleset_name
-}
-
-resource "valtix_policy_rule_set" "ew_policy_rule_set" {
-  name = var.ew_policy_ruleset_name
+resource "valtix_policy_rules" "egress_policy_rules" {
+  rule_set_id = valtix_policy_rule_set.egress_policy_rule_set.rule_set_id
   rule {
     name                      = "forward-all-allow"
     description               = "rule for forwarding all traffic"

@@ -24,6 +24,8 @@ valtix_ew_gw_name                 = "aws-valtix-us-east-1-ew"
 gw_keypair_name                   = "valtix-keypair"
 gw_image_name                     = "2.7-16" //recommend select the latest from Valtix UI
 valtix_firewall_role_name         = "valtix-firewall-role"
-valtix_ingress_policy_ruleset_id  = ""
-valtix_egress_policy_ruleset_id   = ""
-valtix_ew_policy_ruleset_id       = ""
+
+//policy ruleset variables
+ingress_policy_ruleset_name = "ingress-policy-ruleset"
+egress_policy_ruleset_name  = "egress-policy-ruleset"
+ew_policy_ruleset_name  = "ew-policy-ruleset"

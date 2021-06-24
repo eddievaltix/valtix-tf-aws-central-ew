@@ -10,8 +10,6 @@ This template creates a simple disabled rule in the policy ruleset as a placehol
 ## valtix_infrastructure
 This template creates the Valtix Services VPC and Valtix Gateways in the account.  The reason why this is created as a separate template is that these resources tend to be static in most deployments. The Valtix gateway deployment expects that a EC2 keypair has already been created and the name of the keypair should be referenced in terraform.tfvars
 
-*(Note) This template has dependencies on outputs from the valtix_iam and valtix_policy templates.  The best way to reference these outputs is to store remote state for valtix_iam and valtix_policy using a remote state backend like S3.  Use this simple module to create the resources needed for Terraform remote state [link](https://github.com/eddievaltix/terraform-remotestate-s3).  In a future Valtix Terraform provider release, data source for policy ruleset id will be supported*
-
 ## How to use:
 1. download aws cli and configure the credentials profile in ~/.aws/credentials.  You will need to define the profile in the terraform.tfvars
 1. git clone this repo
